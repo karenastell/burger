@@ -1,9 +1,5 @@
 const connection = require("./connection");
 
-// selectAll()
-// insertOne();
-// updateOne();
-
 const orm = {
   selectAll: (table) => {
     return new Promise((resolve, reject) => {
@@ -22,7 +18,7 @@ const orm = {
           if (err) reject(err);
           console.log(result);
 
-          //   resolve(result);
+            resolve(result);
         }
       );
     });

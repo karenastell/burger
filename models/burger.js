@@ -1,13 +1,32 @@
 const orm = require("../config/orm");
 
 const burger = {
+  view: () => {
+    return new Promise((resolve, reject) => {
+      orm.selectAll("burgers").then((result) => {
+        if (err) reject(err);
+        resolve(result);
+      });
+    });
+  },
 
-    // orm.selectAll("burgers")
+  create: () => {
+    return new Promise((resolve, reject) => {
+      orm.insertOne("burgers", "burger_name", burgerName).then((result) => {
+        if (err) reject(err);
+        resolve(result);
+      });
+    });
+  },
 
-    // orm.insertOne("burgers", "burger_name", req.body);
-
-    // orm.updateOne("burgers", "devoured", req.body, id)
-   
-}
+  update: (id) => {
+    return new Promise((resolve, reject) => {
+      orm.updateOne("burger", "devoured", true, id).then((result) => {
+        if (err) reject(err);
+        resolve(result);
+      });
+    });
+  },
+};
 
 module.exports = burger;
