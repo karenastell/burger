@@ -12,7 +12,7 @@ const burger = {
 
   create: () => {
     return new Promise((resolve, reject) => {
-      orm.insertOne("burgers", "burger_name", burgerName).then((result) => {
+      orm.insertOne("burgers", "burger_name", name).then((result) => {
         if (err) reject(err);
         resolve(result);
       });
