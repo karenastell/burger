@@ -7,19 +7,17 @@ router.get("/", (req, res) => {
     const devoured = [];
     const notEaten = [];
     data.forEach((row) => {
-      if (devoured === true) {
+      if (row.devoured === 1) {
         devoured.push(row);
       } else {
         notEaten.push(row);
       }
     });
-    console.log(devoured);
-    console.log(notEaten);
-    
+
     const burgerObject = {
-        devoured: devoured,
-        notEaten: notEaten
-    }
+      devoured: devoured,
+      notEaten: notEaten,
+    };
 
     res.render("index", burgerObject);
   });

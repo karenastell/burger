@@ -5,12 +5,12 @@
 <div class="all-burgers">
 <div class = "uneaten-burgers">
 {{#each this.notEaten}}
-<p>{{name}}</p> <button class = "eat" data-id="{{id}}">Eat-Da-Burger!</button>
+<p>{{burger_name}}</p> <button class = "eat" data-id="{{id}}">Eat-Da-Burger!</button>
 {{/each}}
 </div>
 <div class = "devoured-burgers">
     {{#each this.devoured}}
-<p>{{name}}</p>
+<p>{{burger_name}}</p>
 {{/each}}
 </div>
 </div>

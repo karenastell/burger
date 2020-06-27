@@ -9,7 +9,7 @@ body{
 }
 
 .all-burgers {
-    
+    height: fit-content;
     margin: 40px;
     padding: 20px;
     width: 90%;
