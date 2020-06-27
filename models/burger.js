@@ -4,7 +4,6 @@ const burger = {
   view: () => {
     return new Promise((resolve, reject) => {
       orm.selectAll("burgers").then((result) => {
-        // if (err) reject(err);
         resolve(result);
       });
     });
@@ -13,7 +12,6 @@ const burger = {
   create: () => {
     return new Promise((resolve, reject) => {
       orm.insertOne("burgers", "burger_name", name).then((result) => {
-        if (err) reject(err);
         resolve(result);
       });
     });
@@ -22,7 +20,6 @@ const burger = {
   update: (id) => {
     return new Promise((resolve, reject) => {
       orm.updateOne("burger", "devoured", true, id).then((result) => {
-        if (err) reject(err);
         resolve(result);
       });
     });

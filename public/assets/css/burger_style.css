@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+    background-color: grey;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.heading {
+    text-align: center;
+}
+
+.all-burgers {
+    
+    margin: 40px;
+    padding: 20px;
+    width: 90%;
+    background-color: lightblue;
+}
+
+.uneaten-burgers {
+    float: left;
+    margin: 15px;
+    padding: 5px;
+    width: 45%;
+    background-color: lightgreen;
+}
+
+.devoured-burgers {
+    float: right;
+    margin: 15px;
+    padding: 5px;
+    width: 45%;
+    background-color: lightgreen;
+}
+
+.burger-pic {
+    height: 300px;
+}
+
+.new-burger-form {
+    margin: 15px;
+    background-color: lightpink;
+}
