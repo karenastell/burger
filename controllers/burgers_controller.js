@@ -3,7 +3,6 @@ const burger = require("../models/burger");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  if (err) throw err;
   burger.view().then((data) => {
     const devoured = [];
     const notEaten = [];
@@ -25,17 +24,22 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-  if (err) throw err;
   const burgerName = req.body.name;
+  console.log(burgerName);
+
   burger.create(burgerName).then(() => {
-    res.json(`${burgerName} was added`);
+    console.log("burger created");
+
+    res.json(burgerName);
   });
 });
 
+
 router.put("/api/burgers/:id", (req, res) => {
-  if (err) throw err;
   burgerID = req.params.id;
   burger.update(burgerID).then(() => {
+    console.log("burger eaten");
+
     res.json("Burger Eaten");
   });
 });
