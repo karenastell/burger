@@ -14,7 +14,7 @@ const orm = {
       connection.query(
         `INSERT INTO ?? (??) VALUES (?)`,
         [table, columnName, value],
-        (err) => {
+        (err, result) => {
           if (err) reject(err);
           console.log(result);
 
