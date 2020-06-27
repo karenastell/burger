@@ -2,12 +2,12 @@
 
 <div class="all-burgers">
 <div class = "uneaten-burgers">
-{{#each burger}}
+{{#each this.notEaten}}
 <p>{{name}}</p> <button class = "eat" data-id="{{id}}">Eat-Da-Burger!</button>
 {{/each}}
 </div>
 <div class = "devoured-burgers">
-    {{#each burger}}
+    {{#each this.devoured}}
 <p>{{name}}</p>
 {{/each}}
 </div>

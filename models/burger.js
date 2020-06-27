@@ -4,7 +4,7 @@ const burger = {
   view: () => {
     return new Promise((resolve, reject) => {
       orm.selectAll("burgers").then((result) => {
-        if (err) reject(err);
+        // if (err) reject(err);
         resolve(result);
       });
     });
