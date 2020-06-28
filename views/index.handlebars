@@ -8,17 +8,17 @@
 <div class="all-burgers">
 <div class = "uneaten-burgers">
     <h2>Are You Hungry??</h2>
-{{#each this.notEaten}}
+{{#each notEaten}}
 <ul class = "uneaten-list list">
     <li>
-        {{burger_name}} <button class = "eat" data-id="{{id}}">Eat-Da-Burger!</button>
+        {{burger_name}} <button class = "eat" data-id = "{{id}}">Eat-Da-Burger!</button>
     </li>
 </ul>
 {{/each}}
 </div>
 <div class = "devoured-burgers">
     <h2>Yum! Yum!</h2>
-    {{#each this.devoured}}
+    {{#each devoured}}
 <ul class = "eaten-list list">
     <li>
         {{burger_name}} 

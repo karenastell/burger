@@ -15,18 +15,18 @@ $(".submit-btn").on("click", (event) => {
   });
 });
 
-$(".eat").on("click", () => {
+$(".eat").on("click", function() {
     const id = $(this).data("id");
     console.log(id);
 
-    // $.ajax(`api/burgers/${id}`, {
-    //     type: "PUT",
-    //     data: id
-    // }).then(()=>{
-    //     console.log("Ate the burger");
-    //     location.reload();
+    $.ajax(`api/burgers/${id}`, {
+        type: "PUT",
+        data: id
+    }).then(()=>{
+        console.log("Ate the burger");
+        location.reload();
 
-    // })
+    })
 });
 
 

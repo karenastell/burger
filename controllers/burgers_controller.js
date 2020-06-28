@@ -37,7 +37,6 @@ router.put("/api/burgers/:id", (req, res) => {
   burgerID = req.params.id;
   console.log("burgerID", burgerID);
   
-
   burger.update(burgerID).then(() => {
     console.log("burger eaten");
     res.json(burgerID);
