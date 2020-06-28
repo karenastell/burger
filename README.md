@@ -16,4 +16,4 @@ Be sure to run `npm install` to install all dependencies before using the applic
 
 [GitHub Repository](https://github.com/karenastell/burger)
 
-[Heroku]()
+[Heroku - deployed application](https://arcane-tor-21759.herokuapp.com/)
