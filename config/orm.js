@@ -9,6 +9,7 @@ const orm = {
       });
     });
   },
+  
   insertOne: (table, columnName, value) => {
     return new Promise((resolve, reject) => {
       connection.query(
@@ -23,13 +24,14 @@ const orm = {
       );
     });
   },
+
   updateOne: (table, columnName, value, id) => {
     return new Promise((resolve, reject) => {
       connection.query(`UPDATE ?? SET ?? = ? WHERE id = ?`,
         [table, columnName, value, id],
         (err, result) => {
           if (err) reject(err);
-          console.log("orm result", result.id);
+          console.log("orm result", result);
           resolve(result);
         }
       )
