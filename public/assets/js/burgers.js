@@ -1,7 +1,7 @@
 $(".submit-btn").on("click", (event)=>{
     event.preventDefault();
 
-    let newBurger = {
+    const newBurger = {
         name: $(".input-burger").val().trim(),
     }
     console.log(newBurger);
@@ -15,4 +15,20 @@ $(".submit-btn").on("click", (event)=>{
         location.reload();
         
     })
+})
+
+$(".eat").on("click", ()=>{
+  const id = $(this).data("id");
+  console.log(id);
+  
+
+  $.ajax(`api/burgers/${id}`, {
+      type: "PUT",
+      data: id
+  }).then(()=>{
+      console.log("Ate the burger");
+      location.reload();
+      
+  })
+  
 })

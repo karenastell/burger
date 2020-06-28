@@ -21,7 +21,7 @@ const burger = {
 
   update: (id) => {
     return new Promise((resolve, reject) => {
-      orm.updateOne("burger", "devoured", true, id).then((result) => {
+      orm.updateOne("burgers", "devoured", 1, id).then((result) => {
         resolve(result);
       });
     });

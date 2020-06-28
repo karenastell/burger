@@ -29,18 +29,16 @@ router.post("/api/burgers", (req, res) => {
 
   burger.create(burgerName).then(() => {
     console.log("burger created");
-
     res.json(burgerName);
   });
 });
 
-
 router.put("/api/burgers/:id", (req, res) => {
   burgerID = req.params.id;
+
   burger.update(burgerID).then(() => {
     console.log("burger eaten");
-
-    res.json("Burger Eaten");
+    res.json(id);
   });
 });
 
