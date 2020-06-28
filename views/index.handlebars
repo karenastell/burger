@@ -8,6 +8,7 @@
 <div class="all-burgers">
 <div class = "uneaten-burgers">
     <h2>Are You Hungry??</h2>
+    {{!-- takes all the burgers from the unEaten array and displays them in the left column with a button next to them --}}
 {{#each notEaten}}
 <ul class = "uneaten-list list">
     <li>
@@ -18,6 +19,7 @@
 </div>
 <div class = "devoured-burgers">
     <h2>Yum! Yum!</h2>
+     {{!-- takes all the burgers from the devoured array and displays them in the right column --}}
     {{#each devoured}}
 <ul class = "eaten-list list">
     <li>

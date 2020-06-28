@@ -1,6 +1,8 @@
 const mysql = require("mysql");
 require("dotenv").config();
 
+// creates the connection
+
 const PORT = process.env.PORT || 8080;
 
 const connection = mysql.createConnection({

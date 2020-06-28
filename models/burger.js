@@ -1,6 +1,9 @@
 const orm = require("../config/orm");
 
+
+// these functions make the orm functions database specfic
 const burger = {
+    
   view: () => {
     return new Promise((resolve, reject) => {
       orm.selectAll("burgers").then((result) => {
